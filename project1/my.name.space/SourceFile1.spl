@@ -1,0 +1,82 @@
+namespace my.name.space ;
+
+type LocationType = rstring id, rstring time, float64 latitude,
+	float64 longitude, float64 speed, float64 heading ;
+
+composite MainComposite1
+{
+	graph
+		() as FileSink_1 = FileSink(Filtered)
+		{
+			param
+				file : "filtered.cars" ;
+				format : csv ;
+				quoteStrings : false ;
+		}
+
+		(stream<LocationType> Observations) as FileSource_2 =
+			FileSource(DirectoryScan_4_out0)
+		{
+			param
+				format : csv ;
+		}
+
+		(stream<LocationType> Filtered) as Filter_3 = Filter(Split_8_out0 as
+			inPort0Alias)
+		{
+			param
+				filter : id in [ "Red", "Green" ] ;
+		}
+
+		(stream<rstring file> DirectoryScan_4_out0) as DirectoryScan_4 =
+			DirectoryScan()
+		{
+			param
+				directory : "/home/streamsadmin/workspace/project1/data" ;
+				pattern : "all.cars" ;
+		}
+
+		(stream<LocationType> Throttle_5_out0) as Throttle_5 = Throttle(Observations
+			as inputStream)
+		{
+			param
+				rate : 40.0 ;
+		}
+
+		(stream<rstring id, rstring time, float64 avgSpeed> Aggregate_6_out0) as
+			Aggregate_6 = Aggregate(Filtered as inputStream)
+		{
+			window
+				inputStream : tumbling, count(5), partitioned ;
+			param
+				partitionBy : id ;
+			output
+				Aggregate_6_out0 : avgSpeed = Average(speed) ;
+		}
+
+		() as FileSink_7 = FileSink(Aggregate_6_out0 as inputStream)
+		{
+			param
+				file : "average.speeds" ;
+				format : csv ;
+				quoteStrings : false ;
+		}
+
+		(stream<LocationType> Split_8_out0 ; stream<LocationType> Split_8_out1) as
+			Split_8 = Split(Throttle_5_out0)
+		{
+			param
+				index : length(id) <= 6 ? 0l : 1l ;
+		}
+
+		() as FileSink_9 = FileSink(Split_8_out1)
+		{
+			param
+				file : "errors.length" ;
+				flush : 2u ;
+				format : csv ;
+				quoteStrings : false ;
+		}
+
+}
+
