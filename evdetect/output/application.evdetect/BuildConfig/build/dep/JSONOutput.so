@@ -1,0 +1,4 @@
+	@$(CXX_LN) $(SPL_CXXFLAGS) -o bin/JSONOutput.so -fPIC -shared $(SOJSONOutput) -lstreams-stdtk-javaop -L /opt/ibm/InfoSphere_Streams/4.3.0.0/java/jre/lib/amd64/j9vm -Wl,-rpath -Wl,/opt/ibm/InfoSphere_Streams/4.3.0.0/java/jre/lib/amd64/j9vm -lpthread -ldl -lstreams-stdtk-runtime $(SPL_LDFLAGS)\
+	    build/operator/JSONOutput.o \
+	    build/type/BeJwrMSw2NMgqzs8LLinKzEsHACrhAWr.o \
+	    build/type/BeJwrMS62TC1LzSsJqSxILTY0ArODSxJLMvPzYDKZuakALW4PBP.o 

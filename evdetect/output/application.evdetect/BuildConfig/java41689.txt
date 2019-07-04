@@ -1,0 +1,17 @@
+verboseMode=false
+generated=false
+className="com.ibm.streamsx.json.TupleToJSON"
+classLibrary.0="/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.json/impl/lib/com.ibm.streamsx.json.jar"
+classLibrary.0.complex=false
+classLibrary.1="/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.json/lib/com.ibm.streamsx.json.converters.jar"
+classLibrary.1.complex=false
+parameter.className
+parameter.classLibrary
+inputPortCount=1
+inputPort.0=3
+inputPort.0.0=rstring-eventType
+inputPort.0.1=rstring-eventStation
+inputPort.0.2=rstring-eventTime
+outputPortCount=1
+outputPort.0=1
+outputPort.0.0=rstring-jsonString

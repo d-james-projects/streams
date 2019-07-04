@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<tupleModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/tuple" class="BeJwrMU4yKcosTk0ySSnKLwCSqakFAEyGAdw" equalitySupported="true" facade="false" splType="tuple&lt;boolean rise,boolean drop,boolean deep>" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <headers/>
+
+  <attributes>
+    <attribute>
+      <name>rise</name>
+      <cppType>SPL::boolean</cppType>
+      <splType>boolean</splType>
+    </attribute>
+    <attribute>
+      <name>drop</name>
+      <cppType>SPL::boolean</cppType>
+      <splType>boolean</splType>
+    </attribute>
+    <attribute>
+      <name>deep</name>
+      <cppType>SPL::boolean</cppType>
+      <splType>boolean</splType>
+    </attribute>
+  </attributes>
+
+</tupleModel>

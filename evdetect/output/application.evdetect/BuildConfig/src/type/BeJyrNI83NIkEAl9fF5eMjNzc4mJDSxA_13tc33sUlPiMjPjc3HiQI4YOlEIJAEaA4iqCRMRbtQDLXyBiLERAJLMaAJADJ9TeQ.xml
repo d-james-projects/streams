@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<enumerationModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/enumeration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <class>BeJyrNI83NIkEAl9fF5eMjNzc4mJDSxA_13tc33sUlPiMjPjc3HiQI4YOlEIJAEaA4iqCRMRbtQDLXyBiLERAJLMaAJADJ9TeQ</class>
+
+  <enumerators>
+    <enumerator>
+      <name>YYYYMMDDhhmmss</name>
+    </enumerator>
+    <enumerator>
+      <name>YYYY_MM_DD_hh_mm_ss</name>
+    </enumerator>
+    <enumerator>
+      <name>MM_DD_YYYY_hh_mm_ss</name>
+    </enumerator>
+    <enumerator>
+      <name>DD_MM_YYYY_hh_mm_ss</name>
+    </enumerator>
+    <enumerator>
+      <name>YYYY_MM_DD_hh_mm_ss_mmm</name>
+    </enumerator>
+    <enumerator>
+      <name>MM_DD_YYYY_hh_mm_ss_mmm</name>
+    </enumerator>
+    <enumerator>
+      <name>DD_MM_YYYY_hh_mm_ss_mmm</name>
+    </enumerator>
+  </enumerators>
+
+</enumerationModel>

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<operatorInstanceModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/operator/instance" xmlns:an="http://www.ibm.com/xmlns/prod/streams/spl/annotation" xmlns:tt="http://www.ibm.com/xmlns/prod/streams/spl/tupleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <kind>com.ibm.streamsx.inet::InetSource</kind>
+    <class>RawObservations</class>
+    <operatorModelDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.inet/com.ibm.streamsx.inet/InetSource</operatorModelDirectory>
+    <applicationDirectory>/home/streamsadmin/workspace/evdetect</applicationDirectory>
+    <dataDirectory>/home/streamsadmin/workspace/evdetect/data</dataDirectory>
+    <outputDirectory>/home/streamsadmin/workspace/evdetect/output/application.evdetect/BuildConfig</outputDirectory>
+    <toolkits>
+      <toolkit isCurrentToolkit="false">
+        <name>evdetect</name>
+        <rootDirectory>/home/streamsadmin/workspace/evdetect</rootDirectory>
+        <index>0</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>spl</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/spl</rootDirectory>
+        <index>1</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cep</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.cep</rootDirectory>
+        <index>2</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cybersecurity</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.cybersecurity</rootDirectory>
+        <index>3</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.dataexplorer</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.dataexplorer</rootDirectory>
+        <index>4</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.db</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.db</rootDirectory>
+        <index>5</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.geospatial</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.geospatial</rootDirectory>
+        <index>6</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.mining</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.mining</rootDirectory>
+        <index>7</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rproject</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.rproject</rootDirectory>
+        <index>8</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rules</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.rules</rootDirectory>
+        <index>9</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rulescompiler</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.rulescompiler</rootDirectory>
+        <index>10</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.teda</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.teda</rootDirectory>
+        <index>11</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.text</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.text</rootDirectory>
+        <index>12</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.timeseries</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.timeseries</rootDirectory>
+        <index>13</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.datetime</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.datetime</rootDirectory>
+        <index>14</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.dps</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.dps</rootDirectory>
+        <index>15</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hbase</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.hbase</rootDirectory>
+        <index>16</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hdfs</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.hdfs</rootDirectory>
+        <index>17</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="true">
+        <name>com.ibm.streamsx.inet</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.inet</rootDirectory>
+        <index>18</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.iot</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.iot</rootDirectory>
+        <index>19</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.jdbc</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.jdbc</rootDirectory>
+        <index>20</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.json</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.json</rootDirectory>
+        <index>21</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.kafka</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.kafka</rootDirectory>
+        <index>22</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.messagehub</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.messagehub</rootDirectory>
+        <index>23</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.messaging</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.messaging</rootDirectory>
+        <index>24</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.mqtt</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.mqtt</rootDirectory>
+        <index>25</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.network</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.network</rootDirectory>
+        <index>26</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.objectstorage</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.objectstorage</rootDirectory>
+        <index>27</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.rabbitmq</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.rabbitmq</rootDirectory>
+        <index>28</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.sparkmllib</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.sparkmllib</rootDirectory>
+        <index>29</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.topology</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.topology</rootDirectory>
+        <index>30</index>
+      </toolkit>
+    </toolkits>
+    <optimized>true</optimized>
+    <verbose>false</verbose>
+    <networkByteOrdering>false</networkByteOrdering>
+    <codeBeautification>false</codeBeautification>
+    <includes>
+      <include>"../type/BeJwrMSw2NClKLPdPKk4tKkssyczPAwBFJwdU.h"</include>
+    </includes>
+    <stateVariables/>
+    <runtimeConstants>
+      <runtimeConstant>
+        <name>lit$0</name>
+        <cppType>SPL::list&lt;SPL::rstring &gt;</cppType>
+        <splType>list&lt;rstring&gt;</splType>
+        <value>["http://tgftp.nws.noaa.gov/data/observations/metar/cycles/00Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/01Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/02Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/03Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/04Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/05Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/06Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/07Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/08Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/09Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/10Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/11Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/12Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/13Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/14Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/15Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/16Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/17Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/18Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/19Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/20Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/21Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/22Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/23Z.TXT"]</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$1</name>
+        <cppType>SPL::boolean</cppType>
+        <splType>boolean</splType>
+        <value>true</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$2</name>
+        <cppType>SPL::float64</cppType>
+        <splType>float64</splType>
+        <value>240</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$3</name>
+        <cppType>SPL::uint32</cppType>
+        <splType>uint32</splType>
+        <value>3</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$4</name>
+        <cppType>SPL::float64</cppType>
+        <splType>float64</splType>
+        <value>10</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$5</name>
+        <cppType>SPL::boolean</cppType>
+        <splType>boolean</splType>
+        <value>true</value>
+      </runtimeConstant>
+    </runtimeConstants>
+    <sourceLocation>
+      <file>application/evdetect.spl</file>
+      <line>105</line>
+      <column>3</column>
+    </sourceLocation>
+    <productVersion>4.3.0.0</productVersion>
+    <checkpointKind>none</checkpointKind>
+  </context>
+
+  <parameters>
+    <parameter>
+      <name>URIList</name>
+      <values>
+        <value>
+          <cppType>SPL::list&lt;SPL::rstring &gt;</cppType>
+          <splType>list&lt;rstring&gt;</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$0</cppExpression>
+          <splExpression>["http://tgftp.nws.noaa.gov/data/observations/metar/cycles/00Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/01Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/02Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/03Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/04Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/05Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/06Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/07Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/08Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/09Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/10Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/11Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/12Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/13Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/14Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/15Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/16Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/17Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/18Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/19Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/20Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/21Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/22Z.TXT", "http://tgftp.nws.noaa.gov/data/observations/metar/cycles/23Z.TXT"]</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>application/evdetect.spl</file>
+            <line>106</line>
+            <column>21</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>106</line>
+        <column>11</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>incrementalFetch</name>
+      <values>
+        <value>
+          <cppType>SPL::boolean</cppType>
+          <splType>boolean</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$1</cppExpression>
+          <splExpression>true</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>application/evdetect.spl</file>
+            <line>134</line>
+            <column>30</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>134</line>
+        <column>11</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>fetchInterval</name>
+      <values>
+        <value>
+          <cppType>SPL::float64</cppType>
+          <splType>float64</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$2</cppExpression>
+          <splExpression>240</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>application/evdetect.spl</file>
+            <line>137</line>
+            <column>27</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>137</line>
+        <column>11</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>inputLinesPerRecord</name>
+      <values>
+        <value>
+          <cppType>SPL::uint32</cppType>
+          <splType>uint32</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$3</cppExpression>
+          <splExpression>3</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>application/evdetect.spl</file>
+            <line>143</line>
+            <column>32</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>143</line>
+        <column>11</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>initDelay</name>
+      <values>
+        <value>
+          <cppType>SPL::float64</cppType>
+          <splType>float64</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$4</cppExpression>
+          <splExpression>10</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>application/evdetect.spl</file>
+            <line>148</line>
+            <column>22</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>148</line>
+        <column>11</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>punctPerFetch</name>
+      <values>
+        <value>
+          <cppType>SPL::boolean</cppType>
+          <splType>boolean</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$5</cppExpression>
+          <splExpression>true</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>application/evdetect.spl</file>
+            <line>153</line>
+            <column>27</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>153</line>
+        <column>11</column>
+      </sourceLocation>
+    </parameter>
+  </parameters>
+
+  <inputPorts/>
+
+  <outputPorts>
+    <outputPort>
+      <index>0</index>
+      <tupleCppName>oport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwrMSw2NClKLPdPKk4tKkssyczPAwBFJwdU</tupleCppType>
+      <tupleSPLType>tuple&lt;rstring rawObservation&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>true</mutationAllowed>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>105</line>
+        <column>3</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>rawObservation</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="rawObservation" type="rstring"/>
+      </tuple>
+      <finalPunctuationPortScope/>
+    </outputPort>
+  </outputPorts>
+
+</operatorInstanceModel>

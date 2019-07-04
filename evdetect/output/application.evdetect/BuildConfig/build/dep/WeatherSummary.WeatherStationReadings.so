@@ -1,0 +1,5 @@
+	@$(CXX_LN) $(SPL_CXXFLAGS) -o bin/WeatherSummary.WeatherStationReadings.so -fPIC -shared $(SOWeatherSummary.WeatherStationReadings) $(SPL_LDFLAGS)\
+	    build/operator/WeatherSummary/WeatherStationReadings.o \
+	    build/type/BeJyrNI83NIkEAl9fF5eMjNzc4mJDSxA_13tc33sUlPiMjPjc3HiQI4YOlEIJAEaA4iqCRMRbtQDLXyBiLERAJLMaAJADJ9TeQ.o \
+	    build/type/BeJwdyEEOgkAMBdAzNWKcvSRojCu9wJB_0SANMJ22R6wss34vkRB45RMtdGU_06au_0w3zlfWTA0gaUOibFVlRIT3arBfTW8ZZ6lz_0YTpU0KP5BZythiNGDP5shPBfhVNPa4HNGtHqf_1l9IvDW.o \
+	    build/type/BeJwrMSw2NClKLPdPKk4tKkssyczPAwBFJwdU.o 

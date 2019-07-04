@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<operatorInstanceModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/operator/instance" xmlns:an="http://www.ibm.com/xmlns/prod/streams/spl/annotation" xmlns:tt="http://www.ibm.com/xmlns/prod/streams/spl/tupleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <kind>spl.relational::Filter</kind>
+    <class>WeatherSummary::FilteredOlderValues</class>
+    <operatorModelDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/spl/spl/relational/Filter</operatorModelDirectory>
+    <applicationDirectory>/home/streamsadmin/workspace/evdetect</applicationDirectory>
+    <dataDirectory>/home/streamsadmin/workspace/evdetect/data</dataDirectory>
+    <outputDirectory>/home/streamsadmin/workspace/evdetect/output/application.evdetect/BuildConfig</outputDirectory>
+    <toolkits>
+      <toolkit isCurrentToolkit="false">
+        <name>evdetect</name>
+        <rootDirectory>/home/streamsadmin/workspace/evdetect</rootDirectory>
+        <index>0</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="true">
+        <name>spl</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/spl</rootDirectory>
+        <index>1</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cep</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.cep</rootDirectory>
+        <index>2</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cybersecurity</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.cybersecurity</rootDirectory>
+        <index>3</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.dataexplorer</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.dataexplorer</rootDirectory>
+        <index>4</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.db</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.db</rootDirectory>
+        <index>5</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.geospatial</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.geospatial</rootDirectory>
+        <index>6</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.mining</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.mining</rootDirectory>
+        <index>7</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rproject</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.rproject</rootDirectory>
+        <index>8</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rules</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.rules</rootDirectory>
+        <index>9</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rulescompiler</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.rulescompiler</rootDirectory>
+        <index>10</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.teda</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.teda</rootDirectory>
+        <index>11</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.text</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.text</rootDirectory>
+        <index>12</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.timeseries</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.timeseries</rootDirectory>
+        <index>13</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.datetime</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.datetime</rootDirectory>
+        <index>14</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.dps</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.dps</rootDirectory>
+        <index>15</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hbase</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.hbase</rootDirectory>
+        <index>16</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hdfs</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.hdfs</rootDirectory>
+        <index>17</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.inet</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.inet</rootDirectory>
+        <index>18</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.iot</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.iot</rootDirectory>
+        <index>19</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.jdbc</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.jdbc</rootDirectory>
+        <index>20</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.json</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.json</rootDirectory>
+        <index>21</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.kafka</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.kafka</rootDirectory>
+        <index>22</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.messagehub</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.messagehub</rootDirectory>
+        <index>23</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.messaging</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.messaging</rootDirectory>
+        <index>24</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.mqtt</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.mqtt</rootDirectory>
+        <index>25</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.network</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.network</rootDirectory>
+        <index>26</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.objectstorage</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.objectstorage</rootDirectory>
+        <index>27</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.rabbitmq</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.rabbitmq</rootDirectory>
+        <index>28</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.sparkmllib</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.sparkmllib</rootDirectory>
+        <index>29</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.topology</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.topology</rootDirectory>
+        <index>30</index>
+      </toolkit>
+    </toolkits>
+    <optimized>true</optimized>
+    <verbose>false</verbose>
+    <networkByteOrdering>false</networkByteOrdering>
+    <codeBeautification>false</codeBeautification>
+    <includes>
+      <include>"../../type/BeJwdyEEOgkAMBdAzNWKcvSRojCu9wJB_0SANMJ22R6wss34vkRB45RMtdGU_06au_0w3zlfWTA0gaUOibFVlRIT3arBfTW8ZZ6lz_0YTpU0KP5BZythiNGDP5shPBfhVNPa4HNGtHqf_1l9IvDW.h"</include>
+    </includes>
+    <stateVariables/>
+    <runtimeConstants>
+      <runtimeConstant>
+        <name>lit$0</name>
+        <cppType>SPL::int64</cppType>
+        <splType>int64</splType>
+        <value>43200</value>
+      </runtimeConstant>
+    </runtimeConstants>
+    <sourceLocation>
+      <file>application/evdetect.spl</file>
+      <line>487</line>
+      <column>5</column>
+    </sourceLocation>
+    <productVersion>4.3.0.0</productVersion>
+    <checkpointKind>none</checkpointKind>
+  </context>
+
+  <parameters>
+    <parameter>
+      <name>filter</name>
+      <values>
+        <value>
+          <cppType>SPL::boolean</cppType>
+          <splType>boolean</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>(iport$0.get_observationTime() &gt; SPL::int64(::SPL::Functions::Time::getSeconds(::SPL::Functions::Time::getTimestamp()) - lit$0))</cppExpression>
+          <splExpression>WeatherSummary.FilteredMissingValues.observationTime &gt; (getSeconds(getTimestamp()) - 43200)</splExpression>
+          <hasFunctions>true</hasFunctions>
+          <hasSideEffects>true</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>true</hasStreamAttributes>
+          <parameterExpressionMode>Expression</parameterExpressionMode>
+          <sourceLocation>
+            <file>application/evdetect.spl</file>
+            <line>490</line>
+            <column>22</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>490</line>
+        <column>13</column>
+      </sourceLocation>
+    </parameter>
+  </parameters>
+
+  <inputPorts>
+    <inputPort>
+      <index>0</index>
+      <tupleCppName>iport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwdyEEOgkAMBdAzNWKcvSRojCu9wJB_0SANMJ22R6wss34vkRB45RMtdGU_06au_0w3zlfWTA0gaUOibFVlRIT3arBfTW8ZZ6lz_0YTpU0KP5BZythiNGDP5shPBfhVNPa4HNGtHqf_1l9IvDW</tupleCppType>
+      <tupleSPLType>tuple&lt;rstring stationCode,int64 observationTime,float32 temp,float32 dewpoint,int16 pressureMillibars,int16 windHeadingDegrees,int16 windSpeedKnots,int16 windGustKnots&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>false</mutationAllowed>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>487</line>
+        <column>64</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>stationCode</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+        </attribute>
+        <attribute>
+          <name>observationTime</name>
+          <cppType>SPL::int64</cppType>
+          <splType>int64</splType>
+        </attribute>
+        <attribute>
+          <name>temp</name>
+          <cppType>SPL::float32</cppType>
+          <splType>float32</splType>
+        </attribute>
+        <attribute>
+          <name>dewpoint</name>
+          <cppType>SPL::float32</cppType>
+          <splType>float32</splType>
+        </attribute>
+        <attribute>
+          <name>pressureMillibars</name>
+          <cppType>SPL::int16</cppType>
+          <splType>int16</splType>
+        </attribute>
+        <attribute>
+          <name>windHeadingDegrees</name>
+          <cppType>SPL::int16</cppType>
+          <splType>int16</splType>
+        </attribute>
+        <attribute>
+          <name>windSpeedKnots</name>
+          <cppType>SPL::int16</cppType>
+          <splType>int16</splType>
+        </attribute>
+        <attribute>
+          <name>windGustKnots</name>
+          <cppType>SPL::int16</cppType>
+          <splType>int16</splType>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="stationCode" type="rstring"/>
+        <tt:attr name="observationTime" type="int64"/>
+        <tt:attr name="temp" type="float32"/>
+        <tt:attr name="dewpoint" type="float32"/>
+        <tt:attr name="pressureMillibars" type="int16"/>
+        <tt:attr name="windHeadingDegrees" type="int16"/>
+        <tt:attr name="windSpeedKnots" type="int16"/>
+        <tt:attr name="windGustKnots" type="int16"/>
+      </tuple>
+    </inputPort>
+  </inputPorts>
+
+  <outputPorts>
+    <outputPort>
+      <index>0</index>
+      <tupleCppName>oport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwdyEEOgkAMBdAzNWKcvSRojCu9wJB_0SANMJ22R6wss34vkRB45RMtdGU_06au_0w3zlfWTA0gaUOibFVlRIT3arBfTW8ZZ6lz_0YTpU0KP5BZythiNGDP5shPBfhVNPa4HNGtHqf_1l9IvDW</tupleCppType>
+      <tupleSPLType>tuple&lt;rstring stationCode,int64 observationTime,float32 temp,float32 dewpoint,int16 pressureMillibars,int16 windHeadingDegrees,int16 windSpeedKnots,int16 windGustKnots&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>false</mutationAllowed>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>487</line>
+        <column>5</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>stationCode</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::rstring</cppType>
+                <splType>rstring</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_stationCode()</cppExpression>
+                <splExpression>WeatherSummary.FilteredMissingValues.stationCode</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+        <attribute>
+          <name>observationTime</name>
+          <cppType>SPL::int64</cppType>
+          <splType>int64</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::int64</cppType>
+                <splType>int64</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_observationTime()</cppExpression>
+                <splExpression>WeatherSummary.FilteredMissingValues.observationTime</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+        <attribute>
+          <name>temp</name>
+          <cppType>SPL::float32</cppType>
+          <splType>float32</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::float32</cppType>
+                <splType>float32</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_temp()</cppExpression>
+                <splExpression>WeatherSummary.FilteredMissingValues.temp</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+        <attribute>
+          <name>dewpoint</name>
+          <cppType>SPL::float32</cppType>
+          <splType>float32</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::float32</cppType>
+                <splType>float32</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_dewpoint()</cppExpression>
+                <splExpression>WeatherSummary.FilteredMissingValues.dewpoint</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+        <attribute>
+          <name>pressureMillibars</name>
+          <cppType>SPL::int16</cppType>
+          <splType>int16</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::int16</cppType>
+                <splType>int16</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_pressureMillibars()</cppExpression>
+                <splExpression>WeatherSummary.FilteredMissingValues.pressureMillibars</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+        <attribute>
+          <name>windHeadingDegrees</name>
+          <cppType>SPL::int16</cppType>
+          <splType>int16</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::int16</cppType>
+                <splType>int16</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_windHeadingDegrees()</cppExpression>
+                <splExpression>WeatherSummary.FilteredMissingValues.windHeadingDegrees</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+        <attribute>
+          <name>windSpeedKnots</name>
+          <cppType>SPL::int16</cppType>
+          <splType>int16</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::int16</cppType>
+                <splType>int16</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_windSpeedKnots()</cppExpression>
+                <splExpression>WeatherSummary.FilteredMissingValues.windSpeedKnots</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+        <attribute>
+          <name>windGustKnots</name>
+          <cppType>SPL::int16</cppType>
+          <splType>int16</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::int16</cppType>
+                <splType>int16</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_windGustKnots()</cppExpression>
+                <splExpression>WeatherSummary.FilteredMissingValues.windGustKnots</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="stationCode" type="rstring"/>
+        <tt:attr name="observationTime" type="int64"/>
+        <tt:attr name="temp" type="float32"/>
+        <tt:attr name="dewpoint" type="float32"/>
+        <tt:attr name="pressureMillibars" type="int16"/>
+        <tt:attr name="windHeadingDegrees" type="int16"/>
+        <tt:attr name="windSpeedKnots" type="int16"/>
+        <tt:attr name="windGustKnots" type="int16"/>
+      </tuple>
+      <finalPunctuationPortScope>
+        <port>0</port>
+      </finalPunctuationPortScope>
+    </outputPort>
+  </outputPorts>
+
+</operatorInstanceModel>

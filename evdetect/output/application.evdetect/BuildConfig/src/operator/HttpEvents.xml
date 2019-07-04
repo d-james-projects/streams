@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<operatorInstanceModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/operator/instance" xmlns:an="http://www.ibm.com/xmlns/prod/streams/spl/annotation" xmlns:tt="http://www.ibm.com/xmlns/prod/streams/spl/tupleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <kind>com.ibm.streamsx.inet.http::HTTPPost</kind>
+    <class>HttpEvents</class>
+    <operatorModelDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/spl/spl/utility/JavaOp</operatorModelDirectory>
+    <applicationDirectory>/home/streamsadmin/workspace/evdetect</applicationDirectory>
+    <dataDirectory>/home/streamsadmin/workspace/evdetect/data</dataDirectory>
+    <outputDirectory>/home/streamsadmin/workspace/evdetect/output/application.evdetect/BuildConfig</outputDirectory>
+    <toolkits>
+      <toolkit isCurrentToolkit="false">
+        <name>evdetect</name>
+        <rootDirectory>/home/streamsadmin/workspace/evdetect</rootDirectory>
+        <index>0</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>spl</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/spl</rootDirectory>
+        <index>1</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cep</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.cep</rootDirectory>
+        <index>2</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cybersecurity</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.cybersecurity</rootDirectory>
+        <index>3</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.dataexplorer</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.dataexplorer</rootDirectory>
+        <index>4</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.db</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.db</rootDirectory>
+        <index>5</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.geospatial</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.geospatial</rootDirectory>
+        <index>6</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.mining</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.mining</rootDirectory>
+        <index>7</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rproject</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.rproject</rootDirectory>
+        <index>8</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rules</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.rules</rootDirectory>
+        <index>9</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rulescompiler</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.rulescompiler</rootDirectory>
+        <index>10</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.teda</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.teda</rootDirectory>
+        <index>11</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.text</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.text</rootDirectory>
+        <index>12</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.timeseries</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.timeseries</rootDirectory>
+        <index>13</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.datetime</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.datetime</rootDirectory>
+        <index>14</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.dps</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.dps</rootDirectory>
+        <index>15</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hbase</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.hbase</rootDirectory>
+        <index>16</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hdfs</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.hdfs</rootDirectory>
+        <index>17</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="true">
+        <name>com.ibm.streamsx.inet</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.inet</rootDirectory>
+        <index>18</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.iot</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.iot</rootDirectory>
+        <index>19</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.jdbc</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.jdbc</rootDirectory>
+        <index>20</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.json</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.json</rootDirectory>
+        <index>21</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.kafka</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.kafka</rootDirectory>
+        <index>22</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.messagehub</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.messagehub</rootDirectory>
+        <index>23</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.messaging</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.messaging</rootDirectory>
+        <index>24</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.mqtt</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.mqtt</rootDirectory>
+        <index>25</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.network</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.network</rootDirectory>
+        <index>26</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.objectstorage</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.objectstorage</rootDirectory>
+        <index>27</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.rabbitmq</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.rabbitmq</rootDirectory>
+        <index>28</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.sparkmllib</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.sparkmllib</rootDirectory>
+        <index>29</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.topology</name>
+        <rootDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.topology</rootDirectory>
+        <index>30</index>
+      </toolkit>
+    </toolkits>
+    <optimized>true</optimized>
+    <verbose>false</verbose>
+    <networkByteOrdering>false</networkByteOrdering>
+    <codeBeautification>false</codeBeautification>
+    <includes>
+      <include>"../type/BeJwrMSw2NMgqzs8LLinKzEsHACrhAWr.h"</include>
+    </includes>
+    <stateVariables/>
+    <runtimeConstants/>
+    <sourceLocation>
+      <file>application/evdetect.spl</file>
+      <line>276</line>
+      <column>3</column>
+    </sourceLocation>
+    <productVersion>4.3.0.0</productVersion>
+    <types>
+      <type index="0" type="rstring"/>
+    </types>
+    <javaOperatorModelDirectory>/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.inet/com.ibm.streamsx.inet.http/HTTPPost</javaOperatorModelDirectory>
+    <checkpointKind>none</checkpointKind>
+  </context>
+
+  <parameters>
+    <parameter>
+      <name>className</name>
+      <values>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>SPL::rstring("com.ibm.streamsx.inet.http.HTTPPostOper")</cppExpression>
+          <splExpression>"com.ibm.streamsx.inet.http.HTTPPostOper"</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>&lt;invalid&gt;</file>
+            <line>-1</line>
+            <column>0</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>&lt;invalid&gt;</file>
+        <line>-1</line>
+        <column>0</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>classLibrary</name>
+      <values>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>(SPL::Functions::Utility::getToolkitDirectory(SPL::rstring("com.ibm.streamsx.inet")) + SPL::rstring("/impl/lib/com.ibm.streamsx.inet.jar"))</cppExpression>
+          <splExpression>getToolkitDirectory("com.ibm.streamsx.inet") + "/impl/lib/com.ibm.streamsx.inet.jar"</splExpression>
+          <hasFunctions>true</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>&lt;invalid&gt;</file>
+            <line>-1</line>
+            <column>0</column>
+          </sourceLocation>
+          <expressionTree>
+            <binary op="+" type="0">
+              <lhs>
+                <call fcn="getToolkitDirectory" type="0">
+                  <args count="1">
+                    <arg type="0">
+                      <literal type="0">"com.ibm.streamsx.inet"</literal>
+                    </arg>
+                  </args>
+                </call>
+              </lhs>
+              <rhs>
+                <literal type="0">"/impl/lib/com.ibm.streamsx.inet.jar"</literal>
+              </rhs>
+            </binary>
+          </expressionTree>
+        </value>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>(SPL::Functions::Utility::getToolkitDirectory(SPL::rstring("com.ibm.streamsx.inet")) + SPL::rstring("/opt/downloaded/*"))</cppExpression>
+          <splExpression>getToolkitDirectory("com.ibm.streamsx.inet") + "/opt/downloaded/*"</splExpression>
+          <hasFunctions>true</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>&lt;invalid&gt;</file>
+            <line>-1</line>
+            <column>0</column>
+          </sourceLocation>
+          <expressionTree>
+            <binary op="+" type="0">
+              <lhs>
+                <call fcn="getToolkitDirectory" type="0">
+                  <args count="1">
+                    <arg type="0">
+                      <literal type="0">"com.ibm.streamsx.inet"</literal>
+                    </arg>
+                  </args>
+                </call>
+              </lhs>
+              <rhs>
+                <literal type="0">"/opt/downloaded/*"</literal>
+              </rhs>
+            </binary>
+          </expressionTree>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>&lt;invalid&gt;</file>
+        <line>-1</line>
+        <column>0</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>headerContentType</name>
+      <values>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>SPL::rstring("application/json")</cppExpression>
+          <splExpression>"application/json"</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>application/evdetect.spl</file>
+            <line>278</line>
+            <column>27</column>
+          </sourceLocation>
+          <expressionTree>
+            <literal type="0">"application/json"</literal>
+          </expressionTree>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>278</line>
+        <column>7</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>url</name>
+      <values>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>::getSubmissionTimeValue(SPL::rstring("route"))</cppExpression>
+          <splExpression>(rstring)(getSubmissionTimeValue("route"))</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>application/evdetect.spl</file>
+            <line>279</line>
+            <column>14</column>
+          </sourceLocation>
+          <expressionTree>
+            <cast type="0">
+              <call fcn="::getSubmissionTimeValue" type="0">
+                <args count="1">
+                  <arg type="0">
+                    <literal type="0">"route"</literal>
+                  </arg>
+                </args>
+              </call>
+            </cast>
+          </expressionTree>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>279</line>
+        <column>7</column>
+      </sourceLocation>
+    </parameter>
+  </parameters>
+
+  <inputPorts>
+    <inputPort>
+      <index>0</index>
+      <tupleCppName>iport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwrMSw2NMgqzs8LLinKzEsHACrhAWr</tupleCppType>
+      <tupleSPLType>tuple&lt;rstring jsonString&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>false</mutationAllowed>
+      <sourceLocation>
+        <file>application/evdetect.spl</file>
+        <line>276</line>
+        <column>31</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>jsonString</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="jsonString" type="rstring"/>
+      </tuple>
+    </inputPort>
+  </inputPorts>
+
+  <outputPorts/>
+
+</operatorInstanceModel>

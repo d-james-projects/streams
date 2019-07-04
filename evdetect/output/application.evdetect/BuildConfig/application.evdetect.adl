@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<applicationSet xmlns="http://www.ibm.com/xmlns/prod/streams/application/v4200" name="application::evdetect.appset" xmlns:tt="http://www.ibm.com/xmlns/prod/streams/spl/tupleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <description>application::evdetect application set</description>
+
+  <splApplication adlPath="BuildConfig/application.evdetect.adl" applicationDirectory="toolkits/evdetect" applicationScope="Default" avoidRuntimeYield="auto" buildId="" bundle="./application.evdetect.sab" checkpointDirectory="/home/streamsadmin/workspace/evdetect/data/ckpt" dataDirectory="/home/streamsadmin/workspace/evdetect/data" name="application::evdetect" outputDirectory="BuildConfig" productVersion="4.3.0.0" standaloneApplicationDirectory="toolkits/evdetect" version="1.0.0">
+    <libraries/>
+    <hostpools>
+      <hostpool index="0" membershipMode="shared" name="$default"/>
+    </hostpools>
+    <tupleTypes>
+      <tupleType index="0">
+        <attribute name="rawObservation" type="rstring"/>
+        <tuple>
+          <tt:attr name="rawObservation" type="rstring"/>
+        </tuple>
+      </tupleType>
+      <tupleType index="1">
+        <attribute name="stationCode" type="rstring"/>
+        <attribute name="observationTime" type="int64"/>
+        <attribute name="temp" type="float32"/>
+        <attribute name="dewpoint" type="float32"/>
+        <attribute name="pressureMillibars" type="int16"/>
+        <attribute name="windHeadingDegrees" type="int16"/>
+        <attribute name="windSpeedKnots" type="int16"/>
+        <attribute name="windGustKnots" type="int16"/>
+        <tuple>
+          <tt:attr name="stationCode" type="rstring"/>
+          <tt:attr name="observationTime" type="int64"/>
+          <tt:attr name="temp" type="float32"/>
+          <tt:attr name="dewpoint" type="float32"/>
+          <tt:attr name="pressureMillibars" type="int16"/>
+          <tt:attr name="windHeadingDegrees" type="int16"/>
+          <tt:attr name="windSpeedKnots" type="int16"/>
+          <tt:attr name="windGustKnots" type="int16"/>
+        </tuple>
+      </tupleType>
+      <tupleType index="2">
+        <attribute name="stationCode" type="rstring"/>
+        <attribute name="observationTime" type="int64"/>
+        <attribute name="temp" type="float32"/>
+        <attribute name="tempInF" type="float32"/>
+        <attribute name="relativeHumidity" type="float32"/>
+        <attribute name="dewpoint" type="float32"/>
+        <attribute name="windHeadingDegrees" type="int16"/>
+        <attribute name="windSpeedKnots" type="int16"/>
+        <attribute name="windGustKnots" type="int16"/>
+        <tuple>
+          <tt:attr name="stationCode" type="rstring"/>
+          <tt:attr name="observationTime" type="int64"/>
+          <tt:attr name="temp" type="float32"/>
+          <tt:attr name="tempInF" type="float32"/>
+          <tt:attr name="relativeHumidity" type="float32"/>
+          <tt:attr name="dewpoint" type="float32"/>
+          <tt:attr name="windHeadingDegrees" type="int16"/>
+          <tt:attr name="windSpeedKnots" type="int16"/>
+          <tt:attr name="windGustKnots" type="int16"/>
+        </tuple>
+      </tupleType>
+      <tupleType index="3">
+        <attribute name="weatherValues" type="tuple&lt;rstring stationCode,int64 observationTime,float32 temp,float32 tempInF,float32 relativeHumidity,float32 dewpoint,int16 windHeadingDegrees,int16 windSpeedKnots,int16 windGustKnots>"/>
+        <attribute name="event" type="rstring"/>
+        <tuple>
+          <tt:attr name="weatherValues">
+            <tt:tuple>
+              <tt:attr name="stationCode" type="rstring"/>
+              <tt:attr name="observationTime" type="int64"/>
+              <tt:attr name="temp" type="float32"/>
+              <tt:attr name="tempInF" type="float32"/>
+              <tt:attr name="relativeHumidity" type="float32"/>
+              <tt:attr name="dewpoint" type="float32"/>
+              <tt:attr name="windHeadingDegrees" type="int16"/>
+              <tt:attr name="windSpeedKnots" type="int16"/>
+              <tt:attr name="windGustKnots" type="int16"/>
+            </tt:tuple>
+          </tt:attr>
+          <tt:attr name="event" type="rstring"/>
+        </tuple>
+      </tupleType>
+      <tupleType index="4">
+        <attribute name="eventType" type="rstring"/>
+        <attribute name="eventStation" type="rstring"/>
+        <attribute name="eventTime" type="rstring"/>
+        <tuple>
+          <tt:attr name="eventType" type="rstring"/>
+          <tt:attr name="eventStation" type="rstring"/>
+          <tt:attr name="eventTime" type="rstring"/>
+        </tuple>
+      </tupleType>
+      <tupleType index="5">
+        <attribute name="jsonString" type="rstring"/>
+        <tuple>
+          <tt:attr name="jsonString" type="rstring"/>
+        </tuple>
+      </tupleType>
+      <tupleType index="6">
+        <attribute name="maxTemp" type="float32"/>
+        <attribute name="maxTempStation" type="rstring"/>
+        <attribute name="maxObservationTime" type="int64"/>
+        <attribute name="minTemp" type="float32"/>
+        <attribute name="minTempStation" type="rstring"/>
+        <attribute name="minObservationTime" type="int64"/>
+        <tuple>
+          <tt:attr name="maxTemp" type="float32"/>
+          <tt:attr name="maxTempStation" type="rstring"/>
+          <tt:attr name="maxObservationTime" type="int64"/>
+          <tt:attr name="minTemp" type="float32"/>
+          <tt:attr name="minTempStation" type="rstring"/>
+          <tt:attr name="minObservationTime" type="int64"/>
+        </tuple>
+      </tupleType>
+      <tupleType index="7">
+        <attribute name="eventType" type="rstring"/>
+        <attribute name="maxTemp" type="float32"/>
+        <attribute name="maxTempStation" type="rstring"/>
+        <attribute name="minTemp" type="float32"/>
+        <attribute name="minTempStation" type="rstring"/>
+        <tuple>
+          <tt:attr name="eventType" type="rstring"/>
+          <tt:attr name="maxTemp" type="float32"/>
+          <tt:attr name="maxTempStation" type="rstring"/>
+          <tt:attr name="minTemp" type="float32"/>
+          <tt:attr name="minTempStation" type="rstring"/>
+        </tuple>
+      </tupleType>
+    </tupleTypes>
+    <primitiveOperDefinitions>
+      <primitiveOperDefinition index="0" kind="spl.relational::Functor" runtimeType="SPL_CPlusPlus" toolkitIndex="1"/>
+      <primitiveOperDefinition index="1" kind="spl.relational::Filter" runtimeType="SPL_CPlusPlus" toolkitIndex="1"/>
+      <primitiveOperDefinition index="2" kind="spl.utility::DeDuplicate" runtimeType="SPL_CPlusPlus" toolkitIndex="1"/>
+      <primitiveOperDefinition index="3" kind="com.ibm.streamsx.inet::InetSource" runtimeType="SPL_CPlusPlus" toolkitIndex="18"/>
+      <primitiveOperDefinition index="4" kind="spl.utility::Custom" runtimeType="SPL_CPlusPlus" toolkitIndex="1"/>
+      <primitiveOperDefinition index="5" kind="com.ibm.streams.cep::MatchRegex" runtimeType="SPL_CPlusPlus" toolkitIndex="2"/>
+      <primitiveOperDefinition index="6" kind="com.ibm.streamsx.json::TupleToJSON" runtimeType="SPL_Java" toolkitIndex="21"/>
+      <primitiveOperDefinition index="7" kind="com.ibm.streamsx.inet.http::HTTPPost" runtimeType="SPL_Java" toolkitIndex="18"/>
+      <primitiveOperDefinition index="8" kind="spl.relational::Aggregate" runtimeType="SPL_CPlusPlus" toolkitIndex="1">
+        <customMetricIndicies>
+          <customMetricIndex>0</customMetricIndex>
+        </customMetricIndicies>
+      </primitiveOperDefinition>
+    </primitiveOperDefinitions>
+    <composites>
+      <sourceUris>
+        <uri index="0" path="file:///home/streamsadmin/workspace/evdetect/application/evdetect.spl"/>
+        <uri index="1" path="file:///opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/spl/spl/Sys.spl"/>
+      </sourceUris>
+      <compositeOperDefinitions>
+        <compositeOperDefinition endLine="363" index="0" kind="application::evdetect" numberOfInputPorts="0" numberOfOutputPorts="0" sourceIndex="0" startLine="70" toolkitIndex="0">
+          <description>application::evdetect Composite</description>
+        </compositeOperDefinition>
+        <compositeOperDefinition endLine="528" index="1" kind="application::PrepareAndFilterWeatherData" numberOfInputPorts="1" numberOfOutputPorts="1" sourceIndex="0" startLine="369" toolkitIndex="0">
+          <description>application::PrepareAndFilterWeatherData Composite</description>
+        </compositeOperDefinition>
+        <compositeOperDefinition endLine="256" index="2" kind="spl::Sys" numberOfInputPorts="0" numberOfOutputPorts="0" sourceIndex="1" startLine="20" toolkitIndex="1">
+          <description>spl::Sys Composite</description>
+        </compositeOperDefinition>
+        <compositeOperDefinition endLine="278" index="3" kind="spl::Log" numberOfInputPorts="0" numberOfOutputPorts="0" sourceIndex="1" startLine="262" toolkitIndex="1">
+          <description>spl::Log Composite</description>
+        </compositeOperDefinition>
+        <compositeOperDefinition endLine="301" index="4" kind="spl::Trace" numberOfInputPorts="0" numberOfOutputPorts="0" sourceIndex="1" startLine="283" toolkitIndex="1">
+          <description>spl::Trace Composite</description>
+        </compositeOperDefinition>
+      </compositeOperDefinitions>
+      <compositeOperInstances>
+        <compositeOperInstance definitionIndex="0" endLine="363" index="20" name="application::evdetect" sourceIndex="0" startLine="70">
+          <compositeOperInstance definitionIndex="1" endLine="164" index="21" name="WeatherSummary" sourceIndex="0" startLine="162">
+            <inputPorts>
+              <port index="0">
+                <incomingConnections>
+                  <connection operIndex="0" operName="RawObservations" portIndex="0" portKind="output"/>
+                </incomingConnections>
+                <outgoingConnections>
+                  <connection operIndex="14" operName="WeatherSummary.WeatherStationReadings" portIndex="0" portKind="input"/>
+                </outgoingConnections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port index="0">
+                <incomingConnections>
+                  <connection operIndex="19" operName="WeatherSummary.FilteredAndPrepared" portIndex="0" portKind="output"/>
+                </incomingConnections>
+                <outgoingConnections>
+                  <connection operIndex="1" operName="DryHeatEvent" portIndex="0" portKind="input"/>
+                  <connection operIndex="4" operName="TempSteadyEvent" portIndex="0" portKind="input"/>
+                  <connection operIndex="2" operName="SaunaEvent" portIndex="0" portKind="input"/>
+                  <connection operIndex="9" operName="MaxMinTemp" portIndex="0" portKind="input"/>
+                  <connection operIndex="3" operName="TempMEvent" portIndex="0" portKind="input"/>
+                </outgoingConnections>
+              </port>
+            </outputPorts>
+            <primitiveOperInstance definitionIndex="0" endLine="470" index="14" name="WeatherSummary.WeatherStationReadings" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="384">
+              <description>**********************************************************************************</description>
+              <splAnnotation internal="true" tag="logicClause">
+                <value key="hasState" type="boolean">true</value>
+                <value key="hasOnProcess" type="boolean">false</value>
+                <value key="hasOnTuple" type="boolean">true</value>
+                <value key="hasOnPunct" type="boolean">false</value>
+              </splAnnotation>
+              <inputPorts>
+                <port encoding="LE" index="0" isMutable="false" name="RawObservations" transport="TCP" tupleTypeIndex="0">
+                  <connections>
+                    <connection operIndex="21" operName="WeatherSummary" portIndex="0" portKind="input"/>
+                  </connections>
+                </port>
+              </inputPorts>
+              <outputPorts>
+                <port encoding="LE" index="0" isMutable="true" name="WeatherStationReadings" streamName="WeatherSummary.WeatherStationReadings" transport="TCP" tupleTypeIndex="1" viewable="true">
+                  <connections>
+                    <connection operIndex="15" operName="WeatherSummary.FilteredMissingValues" portIndex="0" portKind="input"/>
+                  </connections>
+                </port>
+              </outputPorts>
+              <envVars/>
+              <resources>
+                <poolLocation poolIndex="0"/>
+              </resources>
+              <runtimeConstants>
+                <runtimeConstant name="lit$0" value="&quot;&quot;"/>
+                <runtimeConstant name="lit$1" value="&quot;&quot;"/>
+                <runtimeConstant name="lit$2" value="0"/>
+                <runtimeConstant name="lit$3" value="-999"/>
+                <runtimeConstant name="lit$4" value="-999"/>
+                <runtimeConstant name="lit$5" value="-999"/>
+                <runtimeConstant name="lit$6" value="-999"/>
+                <runtimeConstant name="lit$7" value="-999"/>
+                <runtimeConstant name="lit$8" value="-999"/>
+                <runtimeConstant name="lit$9" value="&quot;([0-9]{4}/[0-9]{2}/[0-9]{2} [0-9]{2}:[0-9]{2}) ([[:alnum:]]{4}) ([0-9]{6}.)(.*)&quot;"/>
+                <runtimeConstant name="lit$10" value="4"/>
+                <runtimeConstant name="lit$11" value="&quot; &quot;"/>
+                <runtimeConstant name="lit$12" value="4"/>
+                <runtimeConstant name="lit$13" value="2"/>
+                <runtimeConstant name="lit$14" value="&quot;:00&quot;"/>
+                <runtimeConstant name="lit$15" value="1"/>
+                <runtimeConstant name="lit$16" value="&quot;GMT&quot;"/>
+                <runtimeConstant name="lit$17" value="&quot; (M?)([0-9]{2})/((M?)([0-9]{2}))? &quot;"/>
+                <runtimeConstant name="lit$18" value="0"/>
+                <runtimeConstant name="lit$19" value="2"/>
+                <runtimeConstant name="lit$20" value="&quot;M&quot;"/>
+                <runtimeConstant name="lit$21" value="1"/>
+                <runtimeConstant name="lit$22" value="4"/>
+                <runtimeConstant name="lit$23" value="5"/>
+                <runtimeConstant name="lit$24" value="&quot;M&quot;"/>
+                <runtimeConstant name="lit$25" value="4"/>
+                <runtimeConstant name="lit$26" value="&quot; ([0-9]{3}|VRB)([0-9]{2,3})(G([0-9]{2,3}))?(KT|MPS) &quot;"/>
+                <runtimeConstant name="lit$27" value="0"/>
+                <runtimeConstant name="lit$28" value="&quot;VRB&quot;"/>
+                <runtimeConstant name="lit$29" value="1"/>
+                <runtimeConstant name="lit$30" value="1"/>
+                <runtimeConstant name="lit$31" value="-1"/>
+                <runtimeConstant name="lit$32" value="2"/>
+                <runtimeConstant name="lit$33" value="1"/>
+                <runtimeConstant name="lit$34" value="5"/>
+                <runtimeConstant name="lit$35" value="4"/>
+                <runtimeConstant name="lit$36" value="&quot;MPS&quot;"/>
+                <runtimeConstant name="lit$37" value="1.9438445"/>
+                <runtimeConstant name="lit$38" value="1.9438445"/>
+                <runtimeConstant name="lit$39" value="&quot; (A)([0-9]{4}) &quot;"/>
+                <runtimeConstant name="lit$40" value="0"/>
+                <runtimeConstant name="lit$41" value="0.3386"/>
+                <runtimeConstant name="lit$42" value="2"/>
+                <runtimeConstant name="lit$43" value="&quot; (Q)([0-9]{3,4}) &quot;"/>
+                <runtimeConstant name="lit$44" value="0"/>
+                <runtimeConstant name="lit$45" value="2"/>
+                <runtimeConstant name="lit$46" value="&quot;&quot;"/>
+                <runtimeConstant name="lit$47" value="0"/>
+                <runtimeConstant name="lit$48" value="-999"/>
+                <runtimeConstant name="lit$49" value="-999"/>
+                <runtimeConstant name="lit$50" value="-999"/>
+                <runtimeConstant name="lit$51" value="-999"/>
+                <runtimeConstant name="lit$52" value="-999"/>
+                <runtimeConstant name="lit$53" value="-999"/>
+              </runtimeConstants>
+              <sharedObject class="WeatherSummary::WeatherStationReadings">
+                <wrapper>none</wrapper>
+                <uri>bin/WeatherSummary.WeatherStationReadings.so</uri>
+              </sharedObject>
+              <tracing level="error"/>
+            </primitiveOperInstance>
+            <primitiveOperInstance definitionIndex="1" endLine="485" index="15" name="WeatherSummary.FilteredMissingValues" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="480">
+              <inputPorts>
+                <port encoding="LE" index="0" isMutable="false" name="WeatherStationReadings" transport="TCP" tupleTypeIndex="1">
+                  <connections>
+                    <connection operIndex="14" operName="WeatherSummary.WeatherStationReadings" portIndex="0" portKind="output"/>
+                  </connections>
+                </port>
+              </inputPorts>
+              <outputPorts>
+                <port encoding="LE" index="0" isMutable="false" name="FilteredMissingValues" streamName="WeatherSummary.FilteredMissingValues" transport="TCP" tupleTypeIndex="1" viewable="true">
+                  <connections>
+                    <connection operIndex="16" operName="WeatherSummary.FilteredOlderValues" portIndex="0" portKind="input"/>
+                  </connections>
+                </port>
+              </outputPorts>
+              <envVars/>
+              <resources>
+                <poolLocation poolIndex="0"/>
+              </resources>
+              <runtimeConstants>
+                <runtimeConstant name="lit$0" value="-999"/>
+                <runtimeConstant name="lit$1" value="-999"/>
+              </runtimeConstants>
+              <sharedObject class="WeatherSummary::FilteredMissingValues">
+                <wrapper>none</wrapper>
+                <uri>bin/WeatherSummary.FilteredMissingValues.so</uri>
+              </sharedObject>
+              <tracing level="error"/>
+            </primitiveOperInstance>
+            <primitiveOperInstance definitionIndex="1" endLine="491" index="16" name="WeatherSummary.FilteredOlderValues" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="487">
+              <inputPorts>
+                <port encoding="LE" index="0" isMutable="false" name="FilteredMissingValues" transport="TCP" tupleTypeIndex="1">
+                  <connections>
+                    <connection operIndex="15" operName="WeatherSummary.FilteredMissingValues" portIndex="0" portKind="output"/>
+                  </connections>
+                </port>
+              </inputPorts>
+              <outputPorts>
+                <port encoding="LE" index="0" isMutable="false" name="FilteredOlderValues" streamName="WeatherSummary.FilteredOlderValues" transport="TCP" tupleTypeIndex="1" viewable="true">
+                  <connections>
+                    <connection operIndex="17" operName="WeatherSummary.NoDuplicates" portIndex="0" portKind="input"/>
+                  </connections>
+                </port>
+              </outputPorts>
+              <envVars/>
+              <resources>
+                <poolLocation poolIndex="0"/>
+              </resources>
+              <runtimeConstants>
+                <runtimeConstant name="lit$0" value="43200"/>
+              </runtimeConstants>
+              <sharedObject class="WeatherSummary::FilteredOlderValues">
+                <wrapper>none</wrapper>
+                <uri>bin/WeatherSummary.FilteredOlderValues.so</uri>
+              </sharedObject>
+              <tracing level="error"/>
+            </primitiveOperInstance>
+            <primitiveOperInstance definitionIndex="2" endLine="503" index="17" name="WeatherSummary.NoDuplicates" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="498">
+              <inputPorts>
+                <port encoding="LE" index="0" isMutable="false" name="FilteredOlderValues" transport="TCP" tupleTypeIndex="1">
+                  <connections>
+                    <connection operIndex="16" operName="WeatherSummary.FilteredOlderValues" portIndex="0" portKind="output"/>
+                  </connections>
+                </port>
+              </inputPorts>
+              <outputPorts>
+                <port encoding="LE" index="0" isMutable="true" name="NoDuplicates" streamName="WeatherSummary.NoDuplicates" transport="TCP" tupleTypeIndex="1" viewable="true">
+                  <connections>
+                    <connection operIndex="18" operName="WeatherSummary.TimeFilter" portIndex="0" portKind="input"/>
+                  </connections>
+                </port>
+              </outputPorts>
+              <envVars/>
+              <resources>
+                <poolLocation poolIndex="0"/>
+              </resources>
+              <runtimeConstants>
+                <runtimeConstant name="lit$0" value="86400"/>
+              </runtimeConstants>
+              <sharedObject class="WeatherSummary::NoDuplicates">
+                <wrapper>none</wrapper>
+                <uri>bin/WeatherSummary.NoDuplicates.so</uri>
+              </sharedObject>
+              <tracing level="error"/>
+            </primitiveOperInstance>
+            <primitiveOperInstance definitionIndex="1" endLine="514" index="18" name="WeatherSummary.TimeFilter" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="511">
+              <inputPorts>
+                <port encoding="LE" index="0" isMutable="false" name="NoDuplicates" transport="TCP" tupleTypeIndex="1">
+                  <connections>
+                    <connection operIndex="17" operName="WeatherSummary.NoDuplicates" portIndex="0" portKind="output"/>
+                  </connections>
+                </port>
+              </inputPorts>
+              <outputPorts>
+                <port encoding="LE" index="0" isMutable="false" name="TimeFilter" streamName="WeatherSummary.TimeFilter" transport="TCP" tupleTypeIndex="1" viewable="true">
+                  <connections>
+                    <connection operIndex="19" operName="WeatherSummary.FilteredAndPrepared" portIndex="0" portKind="input"/>
+                  </connections>
+                </port>
+              </outputPorts>
+              <envVars/>
+              <resources>
+                <poolLocation poolIndex="0"/>
+              </resources>
+              <runtimeConstants/>
+              <sharedObject class="WeatherSummary::TimeFilter">
+                <wrapper>none</wrapper>
+                <uri>bin/WeatherSummary.TimeFilter.so</uri>
+              </sharedObject>
+              <tracing level="error"/>
+            </primitiveOperInstance>
+            <primitiveOperInstance definitionIndex="0" endLine="527" index="19" name="WeatherSummary.FilteredAndPrepared" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="520">
+              <inputPorts>
+                <port encoding="LE" index="0" isMutable="false" name="TimeFilter" transport="TCP" tupleTypeIndex="1">
+                  <connections>
+                    <connection operIndex="18" operName="WeatherSummary.TimeFilter" portIndex="0" portKind="output"/>
+                  </connections>
+                </port>
+              </inputPorts>
+              <outputPorts>
+                <port encoding="LE" index="0" isMutable="true" name="FilteredAndPrepared" streamName="WeatherSummary" transport="TCP" tupleTypeIndex="2" viewable="true">
+                  <connections>
+                    <connection operIndex="21" operName="WeatherSummary" portIndex="0" portKind="output"/>
+                  </connections>
+                </port>
+              </outputPorts>
+              <envVars/>
+              <resources>
+                <poolLocation poolIndex="0"/>
+              </resources>
+              <runtimeConstants>
+                <runtimeConstant name="lit$0" value="32"/>
+                <runtimeConstant name="lit$1" value="1.8"/>
+                <runtimeConstant name="lit$2" value="273.3"/>
+                <runtimeConstant name="lit$3" value="17.269"/>
+                <runtimeConstant name="lit$4" value="273.3"/>
+                <runtimeConstant name="lit$5" value="17.269"/>
+              </runtimeConstants>
+              <sharedObject class="WeatherSummary::FilteredAndPrepared">
+                <wrapper>none</wrapper>
+                <uri>bin/WeatherSummary.FilteredAndPrepared.so</uri>
+              </sharedObject>
+              <tracing level="error"/>
+            </primitiveOperInstance>
+          </compositeOperInstance>
+          <primitiveOperInstance definitionIndex="3" endLine="154" index="0" name="RawObservations" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="105">
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="RawObservations" streamName="RawObservations" transport="TCP" tupleTypeIndex="0" viewable="true">
+                <connections>
+                  <connection operIndex="21" operName="WeatherSummary" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants>
+              <runtimeConstant name="lit$0" value="[&quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/00Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/01Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/02Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/03Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/04Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/05Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/06Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/07Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/08Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/09Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/10Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/11Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/12Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/13Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/14Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/15Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/16Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/17Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/18Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/19Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/20Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/21Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/22Z.TXT&quot;, &quot;http://tgftp.nws.noaa.gov/data/observations/metar/cycles/23Z.TXT&quot;]"/>
+              <runtimeConstant name="lit$1" value="true"/>
+              <runtimeConstant name="lit$2" value="240"/>
+              <runtimeConstant name="lit$3" value="3"/>
+              <runtimeConstant name="lit$4" value="10"/>
+              <runtimeConstant name="lit$5" value="true"/>
+            </runtimeConstants>
+            <sharedObject class="RawObservations">
+              <wrapper>none</wrapper>
+              <uri>bin/RawObservations.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="4" endLine="183" index="1" name="DryHeatEvent" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="175">
+            <splAnnotation internal="true" tag="logicClause">
+              <value key="hasState" type="boolean">false</value>
+              <value key="hasOnProcess" type="boolean">false</value>
+              <value key="hasOnTuple" type="boolean">true</value>
+              <value key="hasOnPunct" type="boolean">false</value>
+            </splAnnotation>
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="WeatherSummary" transport="TCP" tupleTypeIndex="2">
+                <connections>
+                  <connection operIndex="21" operName="WeatherSummary" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="DryHeatEvent" streamName="DryHeatEvent" transport="TCP" tupleTypeIndex="3" viewable="true">
+                <connections>
+                  <connection operIndex="5" operName="OutputEvents" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants>
+              <runtimeConstant name="lit$0" value="0.1"/>
+              <runtimeConstant name="lit$1" value="105"/>
+              <runtimeConstant name="lit$2" value="&quot;Dry Heat&quot;"/>
+              <runtimeConstant name="lit$3" value="0"/>
+            </runtimeConstants>
+            <sharedObject class="DryHeatEvent">
+              <wrapper>none</wrapper>
+              <uri>bin/DryHeatEvent.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="4" endLine="197" index="2" name="SaunaEvent" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="189">
+            <splAnnotation internal="true" tag="logicClause">
+              <value key="hasState" type="boolean">false</value>
+              <value key="hasOnProcess" type="boolean">false</value>
+              <value key="hasOnTuple" type="boolean">true</value>
+              <value key="hasOnPunct" type="boolean">false</value>
+            </splAnnotation>
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="WeatherSummary" transport="TCP" tupleTypeIndex="2">
+                <connections>
+                  <connection operIndex="21" operName="WeatherSummary" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="SaunaEvent" streamName="SaunaEvent" transport="TCP" tupleTypeIndex="3" viewable="true">
+                <connections>
+                  <connection operIndex="5" operName="OutputEvents" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants>
+              <runtimeConstant name="lit$0" value="0.75"/>
+              <runtimeConstant name="lit$1" value="90"/>
+              <runtimeConstant name="lit$2" value="&quot;Sauna&quot;"/>
+              <runtimeConstant name="lit$3" value="0"/>
+            </runtimeConstants>
+            <sharedObject class="SaunaEvent">
+              <wrapper>none</wrapper>
+              <uri>bin/SaunaEvent.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="5" endLine="226" index="3" name="TempMEvent" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="215">
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="false" name="WeatherSummary" transport="TCP" tupleTypeIndex="2">
+                <connections>
+                  <connection operIndex="21" operName="WeatherSummary" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="TempMEvent" streamName="TempMEvent" transport="TCP" tupleTypeIndex="3" viewable="true">
+                <connections>
+                  <connection operIndex="5" operName="OutputEvents" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants/>
+            <sharedObject class="TempMEvent">
+              <wrapper>none</wrapper>
+              <uri>bin/TempMEvent.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="5" endLine="242" index="4" name="TempSteadyEvent" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="233">
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="false" name="WeatherSummary" transport="TCP" tupleTypeIndex="2">
+                <connections>
+                  <connection operIndex="21" operName="WeatherSummary" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="TempSteadyEvent" streamName="TempSteadyEvent" transport="TCP" tupleTypeIndex="3" viewable="true">
+                <connections>
+                  <connection operIndex="5" operName="OutputEvents" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants/>
+            <sharedObject class="TempSteadyEvent">
+              <wrapper>none</wrapper>
+              <uri>bin/TempSteadyEvent.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="0" endLine="266" index="5" name="OutputEvents" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="248">
+            <splAnnotation internal="true" tag="logicClause">
+              <value key="hasState" type="boolean">true</value>
+              <value key="hasOnProcess" type="boolean">false</value>
+              <value key="hasOnTuple" type="boolean">true</value>
+              <value key="hasOnPunct" type="boolean">false</value>
+            </splAnnotation>
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="false" name="I" transport="TCP" tupleTypeIndex="3">
+                <connections>
+                  <connection operIndex="1" operName="DryHeatEvent" portIndex="0" portKind="output"/>
+                  <connection operIndex="2" operName="SaunaEvent" portIndex="0" portKind="output"/>
+                  <connection operIndex="3" operName="TempMEvent" portIndex="0" portKind="output"/>
+                  <connection operIndex="4" operName="TempSteadyEvent" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="OutputEvents" streamName="OutputEvents" transport="TCP" tupleTypeIndex="4" viewable="true">
+                <connections>
+                  <connection operIndex="6" operName="JSONOutput" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants>
+              <runtimeConstant name="lit$0" value="0"/>
+              <runtimeConstant name="lit$1" value="0"/>
+              <runtimeConstant name="lit$2" value="16"/>
+              <runtimeConstant name="lit$3" value="&quot;&quot;"/>
+            </runtimeConstants>
+            <sharedObject class="OutputEvents">
+              <wrapper>none</wrapper>
+              <uri>bin/OutputEvents.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="6" endLine="274" index="6" name="JSONOutput" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="false" sourceIndex="0" startLine="272">
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="false" name="OutputEvents" transport="TCP" tupleTypeIndex="4">
+                <connections>
+                  <connection operIndex="5" operName="OutputEvents" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="JSONOutput" streamName="JSONOutput" transport="TCP" tupleTypeIndex="5" viewable="true">
+                <connections>
+                  <connection operIndex="7" operName="HttpEvents" portIndex="0" portKind="input"/>
+                  <connection operIndex="8" operName="HttpEventsDbg" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants/>
+            <sharedObject class="JSONOutput">
+              <wrapper>none</wrapper>
+              <uri>bin/JSONOutput.so</uri>
+            </sharedObject>
+            <jvmArguments/>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="7" endLine="280" index="7" name="HttpEvents" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="false" sourceIndex="0" startLine="276">
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="false" name="JSONOutput" transport="TCP" tupleTypeIndex="5">
+                <connections>
+                  <connection operIndex="6" operName="JSONOutput" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants>
+              <runtimeConstant name="lit$0" value="&quot;application/json&quot;"/>
+              <runtimeConstant name="lit$1" submissionTimeValueIndex="0" value="&quot;&quot;"/>
+            </runtimeConstants>
+            <sharedObject class="HttpEvents">
+              <wrapper>none</wrapper>
+              <uri>bin/HttpEvents.so</uri>
+            </sharedObject>
+            <jvmArguments/>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="4" endLine="293" index="8" name="HttpEventsDbg" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="285">
+            <splAnnotation internal="true" tag="logicClause">
+              <value key="hasState" type="boolean">false</value>
+              <value key="hasOnProcess" type="boolean">false</value>
+              <value key="hasOnTuple" type="boolean">true</value>
+              <value key="hasOnPunct" type="boolean">true</value>
+            </splAnnotation>
+            <inputPorts>
+              <port encoding="LE" index="0" isControl="true" isMutable="false" name="JSONOutput" transport="TCP" tupleTypeIndex="5">
+                <connections>
+                  <connection operIndex="6" operName="JSONOutput" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants/>
+            <sharedObject class="HttpEventsDbg">
+              <wrapper>none</wrapper>
+              <uri>bin/HttpEventsDbg.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="8" endLine="311" index="9" name="MaxMinTemp" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="false" sourceIndex="0" startLine="298">
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="false" name="WeatherSummary" transport="TCP" tupleTypeIndex="2">
+                <connections>
+                  <connection operIndex="21" operName="WeatherSummary" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="MaxMinTemp" streamName="MaxMinTemp" transport="TCP" tupleTypeIndex="6" viewable="true">
+                <connections>
+                  <connection operIndex="10" operName="NewMaxMin" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants>
+              <runtimeConstant name="lit$0" value="3600"/>
+              <runtimeConstant name="lit$1" value="60"/>
+            </runtimeConstants>
+            <sharedObject class="MaxMinTemp">
+              <wrapper>none</wrapper>
+              <uri>bin/MaxMinTemp.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="4" endLine="334" index="10" name="NewMaxMin" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="317">
+            <splAnnotation internal="true" tag="logicClause">
+              <value key="hasState" type="boolean">true</value>
+              <value key="hasOnProcess" type="boolean">false</value>
+              <value key="hasOnTuple" type="boolean">true</value>
+              <value key="hasOnPunct" type="boolean">false</value>
+            </splAnnotation>
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="MaxMinTemp" transport="TCP" tupleTypeIndex="6">
+                <connections>
+                  <connection operIndex="9" operName="MaxMinTemp" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="NewMaxMin" streamName="NewMaxMin" transport="TCP" tupleTypeIndex="7" viewable="true">
+                <connections>
+                  <connection operIndex="11" operName="JSONTempOutput" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants>
+              <runtimeConstant name="lit$0" value="&quot;MaxMin Temp&quot;"/>
+              <runtimeConstant name="lit$1" value="0"/>
+              <runtimeConstant name="lit$2" value="0"/>
+              <runtimeConstant name="lit$3" value="100"/>
+            </runtimeConstants>
+            <sharedObject class="NewMaxMin">
+              <wrapper>none</wrapper>
+              <uri>bin/NewMaxMin.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="6" endLine="342" index="11" name="JSONTempOutput" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="false" sourceIndex="0" startLine="340">
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="false" name="NewMaxMin" transport="TCP" tupleTypeIndex="7">
+                <connections>
+                  <connection operIndex="10" operName="NewMaxMin" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <outputPorts>
+              <port encoding="LE" index="0" isMutable="true" name="JSONTempOutput" streamName="JSONTempOutput" transport="TCP" tupleTypeIndex="5" viewable="true">
+                <connections>
+                  <connection operIndex="12" operName="HttpTempEvents" portIndex="0" portKind="input"/>
+                  <connection operIndex="13" operName="HttpTempEventsDbg" portIndex="0" portKind="input"/>
+                </connections>
+              </port>
+            </outputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants/>
+            <sharedObject class="JSONTempOutput">
+              <wrapper>none</wrapper>
+              <uri>bin/JSONTempOutput.so</uri>
+            </sharedObject>
+            <jvmArguments/>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="7" endLine="348" index="12" name="HttpTempEvents" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="false" sourceIndex="0" startLine="344">
+            <inputPorts>
+              <port encoding="LE" index="0" isMutable="false" name="JSONTempOutput" transport="TCP" tupleTypeIndex="5">
+                <connections>
+                  <connection operIndex="11" operName="JSONTempOutput" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants>
+              <runtimeConstant name="lit$0" value="&quot;application/json&quot;"/>
+              <runtimeConstant name="lit$1" submissionTimeValueIndex="0" value="&quot;&quot;"/>
+            </runtimeConstants>
+            <sharedObject class="HttpEvents">
+              <wrapper>none</wrapper>
+              <uri>bin/HttpEvents.so</uri>
+            </sharedObject>
+            <jvmArguments/>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+          <primitiveOperInstance definitionIndex="4" endLine="361" index="13" name="HttpTempEventsDbg" optimized="true" relocatable="true" restartable="true" singleThreadedOnOutputs="true" sourceIndex="0" startLine="353">
+            <splAnnotation internal="true" tag="logicClause">
+              <value key="hasState" type="boolean">false</value>
+              <value key="hasOnProcess" type="boolean">false</value>
+              <value key="hasOnTuple" type="boolean">true</value>
+              <value key="hasOnPunct" type="boolean">true</value>
+            </splAnnotation>
+            <inputPorts>
+              <port encoding="LE" index="0" isControl="true" isMutable="false" name="JSONTempOutput" transport="TCP" tupleTypeIndex="5">
+                <connections>
+                  <connection operIndex="11" operName="JSONTempOutput" portIndex="0" portKind="output"/>
+                </connections>
+              </port>
+            </inputPorts>
+            <envVars/>
+            <resources>
+              <poolLocation poolIndex="0"/>
+            </resources>
+            <runtimeConstants/>
+            <sharedObject class="HttpEventsDbg">
+              <wrapper>none</wrapper>
+              <uri>bin/HttpEventsDbg.so</uri>
+            </sharedObject>
+            <tracing level="error"/>
+          </primitiveOperInstance>
+        </compositeOperInstance>
+      </compositeOperInstances>
+    </composites>
+    <toolkits>
+      <toolkit index="0" name="evdetect" uri="file:///home/streamsadmin/workspace/evdetect" version="1.0.0"/>
+      <toolkit index="1" name="spl" uri="file:///opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/spl" version="1.4.0"/>
+      <toolkit index="2" name="com.ibm.streams.cep" uri="file:///opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.cep" version="2.1.1"/>
+      <toolkit index="18" name="com.ibm.streamsx.inet" uri="file:///opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.inet" version="2.3.6"/>
+      <toolkit index="21" name="com.ibm.streamsx.json" uri="file:///opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.json" version="1.5.0"/>
+    </toolkits>
+    <customMetrics>
+      <customMetric index="0" kind="Gauge" name="nCurrentPartitions">
+        <description>The number of partitions in the window.</description>
+      </customMetric>
+    </customMetrics>
+    <submissionTimeValues>
+      <submissionTimeValue compositeName="application::evdetect" index="0" kind="named" name="route" required="true"/>
+    </submissionTimeValues>
+  </splApplication>
+
+</applicationSet>

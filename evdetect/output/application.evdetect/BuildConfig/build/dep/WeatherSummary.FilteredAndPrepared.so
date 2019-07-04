@@ -1,0 +1,4 @@
+	@$(CXX_LN) $(SPL_CXXFLAGS) -o bin/WeatherSummary.FilteredAndPrepared.so -fPIC -shared $(SOWeatherSummary.FilteredAndPrepared) $(SPL_LDFLAGS)\
+	    build/operator/WeatherSummary/FilteredAndPrepared.o \
+	    build/type/BeJwdyEEOgkAMBdAzNWKcvSRojCu9wJB_0SANMJ22R6wss34vkRB45RMtdGU_06au_0w3zlfWTA0gaUOibFVlRIT3arBfTW8ZZ6lz_0YTpU0KP5BZythiNGDP5shPBfhVNPa4HNGtHqf_1l9IvDW.o \
+	    build/type/BeJwdyVEOgkAMhOEzNaLis0YhPuoFMJ0lDW672S0Qby_1LyyT_1N34pRMUHF9OrMXo62qcgL7u8JSI0jpjCuW6v90CnjO_12LujmKCz_0Cy1jTSbqE7WrKHcYWHS8YcxAmaip_0EoAP9V8g0OFx1x87z8NqjKy.o 

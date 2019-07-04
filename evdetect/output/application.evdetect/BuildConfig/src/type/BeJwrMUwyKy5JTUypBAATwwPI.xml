@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<tupleModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/tuple" class="BeJwrMUwyKy5JTUypBAATwwPI" equalitySupported="true" facade="false" splType="tuple&lt;boolean steady>" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <headers/>
+
+  <attributes>
+    <attribute>
+      <name>steady</name>
+      <cppType>SPL::boolean</cppType>
+      <splType>boolean</splType>
+    </attribute>
+  </attributes>
+
+</tupleModel>

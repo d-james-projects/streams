@@ -1,0 +1,3 @@
+	@$(CXX_LN) $(SPL_CXXFLAGS) -o bin/RawObservations.so -fPIC -shared $(SORawObservations) -lcurl $(SPL_LDFLAGS)\
+	    build/operator/RawObservations.o \
+	    build/type/BeJwrMSw2NClKLPdPKk4tKkssyczPAwBFJwdU.o 

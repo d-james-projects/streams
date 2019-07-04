@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<tupleModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/tuple" class="BeJwrMUszz02sCEnNLSg2NIGygksSSzLz8zwNLYAC_1knFqUVlYIGQzNxUoPLMPJhyCAtJeWYemnIA6rYkDp" equalitySupported="true" facade="false" splType="tuple&lt;float32 maxTemp,rstring maxTempStation,int64 maxObservationTime,float32 minTemp,rstring minTempStation,int64 minObservationTime>" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <headers/>
+
+  <attributes>
+    <attribute>
+      <name>maxTemp</name>
+      <cppType>SPL::float32</cppType>
+      <splType>float32</splType>
+    </attribute>
+    <attribute>
+      <name>maxTempStation</name>
+      <cppType>SPL::rstring</cppType>
+      <splType>rstring</splType>
+    </attribute>
+    <attribute>
+      <name>maxObservationTime</name>
+      <cppType>SPL::int64</cppType>
+      <splType>int64</splType>
+    </attribute>
+    <attribute>
+      <name>minTemp</name>
+      <cppType>SPL::float32</cppType>
+      <splType>float32</splType>
+    </attribute>
+    <attribute>
+      <name>minTempStation</name>
+      <cppType>SPL::rstring</cppType>
+      <splType>rstring</splType>
+    </attribute>
+    <attribute>
+      <name>minObservationTime</name>
+      <cppType>SPL::int64</cppType>
+      <splType>int64</splType>
+    </attribute>
+  </attributes>
+
+</tupleModel>

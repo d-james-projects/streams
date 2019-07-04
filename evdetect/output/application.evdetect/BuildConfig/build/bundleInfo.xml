@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bundleInfoModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/bundleInfoModel" adlFile="application.evdetect.adl" applicationDirectory="evdetect" buildDate="" buildId="" bundleVersion="4300" executionMode="distributed" outputDirectory="BuildConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <toolkit compileRoot="/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/spl" name="spl" version="1.4.0">
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+  <toolkit compileRoot="/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streams.cep" name="com.ibm.streams.cep" version="2.1.1">
+    <file name="toolkit.xml"/>
+    <file name="impl/nl/CEPResource.dat"/>
+  </toolkit>
+
+  <toolkit compileRoot="/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.inet" name="com.ibm.streamsx.inet" version="2.3.6">
+    <file name="etc/http_request_oauth2.properties"/>
+    <file name="etc/http_auth_basic.properties"/>
+    <file name="etc/http_request_oauth1.properties"/>
+    <file name="etc/http_request_auth.properties"/>
+    <file name="etc/http_auth_oauth.properties"/>
+    <file name="toolkit.xml"/>
+    <file name="impl/bin/CodeGenX.pm"/>
+    <file name="impl/nl/InetResource.dat"/>
+    <file name="impl/lib/libinettoolkit.so"/>
+    <file name="impl/lib/com.ibm.streamsx.inet.jar"/>
+    <file name="opt/signpost-1.2/lib/signpost-core-1.2.jar"/>
+    <file name="opt/signpost-1.2/lib/signpost-commonshttp4-1.2.1.1.jar"/>
+    <file name="opt/signpost-1.2/LICENSE.txt"/>
+    <file name="opt/httpcomponents-client-4.5.5/NOTICE.txt"/>
+    <file name="opt/httpcomponents-client-4.5.5/README.txt"/>
+    <file name="opt/httpcomponents-client-4.5.5/lib/httpcore-4.4.9.jar"/>
+    <file name="opt/httpcomponents-client-4.5.5/lib/httpmime-4.5.5.jar"/>
+    <file name="opt/httpcomponents-client-4.5.5/lib/httpclient-4.5.5.jar"/>
+    <file name="opt/httpcomponents-client-4.5.5/lib/httpclient-cache-4.5.5.jar"/>
+    <file name="opt/httpcomponents-client-4.5.5/lib/commons-codec-1.10.jar"/>
+    <file name="opt/httpcomponents-client-4.5.5/lib/commons-logging-1.2.jar"/>
+    <file name="opt/httpcomponents-client-4.5.5/LICENSE.txt"/>
+  </toolkit>
+
+  <toolkit compileRoot="/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.json" name="com.ibm.streamsx.json" version="1.5.0">
+    <file name="lib/com.ibm.streamsx.json.converters.jar"/>
+    <file name="toolkit.xml"/>
+    <file name="impl/nl/JSONResource.dat"/>
+    <file name="impl/lib/com.ibm.streamsx.json.jar"/>
+  </toolkit>
+
+  <toolkit compileRoot="/home/streamsadmin/workspace/evdetect" name="evdetect" version="1.0.0">
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+</bundleInfoModel>

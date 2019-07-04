@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<tupleModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/tuple" class="BeJwrMS62TC1LzSsJqSxILTY0ArODSxJLMvPzYDKZuakALW4PBP" equalitySupported="true" facade="false" splType="tuple&lt;rstring eventType,rstring eventStation,rstring eventTime>" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <headers/>
+
+  <attributes>
+    <attribute>
+      <name>eventType</name>
+      <cppType>SPL::rstring</cppType>
+      <splType>rstring</splType>
+    </attribute>
+    <attribute>
+      <name>eventStation</name>
+      <cppType>SPL::rstring</cppType>
+      <splType>rstring</splType>
+    </attribute>
+    <attribute>
+      <name>eventTime</name>
+      <cppType>SPL::rstring</cppType>
+      <splType>rstring</splType>
+    </attribute>
+  </attributes>
+
+</tupleModel>

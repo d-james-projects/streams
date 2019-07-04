@@ -1,0 +1,4 @@
+	@$(CXX_LN) $(SPL_CXXFLAGS) -o bin/MaxMinTemp.so -fPIC -shared $(SOMaxMinTemp) -lstreams-stdtk-runtime $(SPL_LDFLAGS)\
+	    build/operator/MaxMinTemp.o \
+	    build/type/BeJwdyVEOgkAMhOEzNaLis0YhPuoFMJ0lDW672S0Qby_1LyyT_1N34pRMUHF9OrMXo62qcgL7u8JSI0jpjCuW6v90CnjO_12LujmKCz_0Cy1jTSbqE7WrKHcYWHS8YcxAmaip_0EoAP9V8g0OFx1x87z8NqjKy.o \
+	    build/type/BeJwrMUszz02sCEnNLSg2NIGygksSSzLz8zwNLYAC_1knFqUVlYIGQzNxUoPLMPJhyCAtJeWYemnIA6rYkDp.o 

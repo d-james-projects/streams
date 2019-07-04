@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<tupleModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/tuple" class="BeJwrMS22TC1LzSsJqSxITTPPTawISc0tKDY0gbKCSxJLMvPzgDKZeTAZCAsqAwA5ZRk0" equalitySupported="true" facade="false" splType="tuple&lt;rstring eventType,float32 maxTemp,rstring maxTempStation,float32 minTemp,rstring minTempStation>" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <headers/>
+
+  <attributes>
+    <attribute>
+      <name>eventType</name>
+      <cppType>SPL::rstring</cppType>
+      <splType>rstring</splType>
+    </attribute>
+    <attribute>
+      <name>maxTemp</name>
+      <cppType>SPL::float32</cppType>
+      <splType>float32</splType>
+    </attribute>
+    <attribute>
+      <name>maxTempStation</name>
+      <cppType>SPL::rstring</cppType>
+      <splType>rstring</splType>
+    </attribute>
+    <attribute>
+      <name>minTemp</name>
+      <cppType>SPL::float32</cppType>
+      <splType>float32</splType>
+    </attribute>
+    <attribute>
+      <name>minTempStation</name>
+      <cppType>SPL::rstring</cppType>
+      <splType>rstring</splType>
+    </attribute>
+  </attributes>
+
+</tupleModel>

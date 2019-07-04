@@ -1,0 +1,3 @@
+	@$(CXX_LN) $(SPL_CXXFLAGS) -o bin/WeatherSummary.TimeFilter.so -fPIC -shared $(SOWeatherSummary.TimeFilter) $(SPL_LDFLAGS)\
+	    build/operator/WeatherSummary/TimeFilter.o \
+	    build/type/BeJwdyEEOgkAMBdAzNWKcvSRojCu9wJB_0SANMJ22R6wss34vkRB45RMtdGU_06au_0w3zlfWTA0gaUOibFVlRIT3arBfTW8ZZ6lz_0YTpU0KP5BZythiNGDP5shPBfhVNPa4HNGtHqf_1l9IvDW.o 

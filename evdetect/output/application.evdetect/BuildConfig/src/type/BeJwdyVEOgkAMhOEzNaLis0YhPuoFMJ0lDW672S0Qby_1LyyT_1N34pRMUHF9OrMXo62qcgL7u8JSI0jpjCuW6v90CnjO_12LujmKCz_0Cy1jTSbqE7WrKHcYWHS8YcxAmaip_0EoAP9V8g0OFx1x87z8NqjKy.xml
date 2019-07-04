@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<tupleModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/tuple" class="BeJwdyVEOgkAMhOEzNaLis0YhPuoFMJ0lDW672S0Qby_1LyyT_1N34pRMUHF9OrMXo62qcgL7u8JSI0jpjCuW6v90CnjO_12LujmKCz_0Cy1jTSbqE7WrKHcYWHS8YcxAmaip_0EoAP9V8g0OFx1x87z8NqjKy" equalitySupported="true" facade="false" splType="tuple&lt;rstring stationCode,int64 observationTime,float32 temp,float32 tempInF,float32 relativeHumidity,float32 dewpoint,int16 windHeadingDegrees,int16 windSpeedKnots,int16 windGustKnots>" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <headers/>
+
+  <attributes>
+    <attribute>
+      <name>stationCode</name>
+      <cppType>SPL::rstring</cppType>
+      <splType>rstring</splType>
+    </attribute>
+    <attribute>
+      <name>observationTime</name>
+      <cppType>SPL::int64</cppType>
+      <splType>int64</splType>
+    </attribute>
+    <attribute>
+      <name>temp</name>
+      <cppType>SPL::float32</cppType>
+      <splType>float32</splType>
+    </attribute>
+    <attribute>
+      <name>tempInF</name>
+      <cppType>SPL::float32</cppType>
+      <splType>float32</splType>
+    </attribute>
+    <attribute>
+      <name>relativeHumidity</name>
+      <cppType>SPL::float32</cppType>
+      <splType>float32</splType>
+    </attribute>
+    <attribute>
+      <name>dewpoint</name>
+      <cppType>SPL::float32</cppType>
+      <splType>float32</splType>
+    </attribute>
+    <attribute>
+      <name>windHeadingDegrees</name>
+      <cppType>SPL::int16</cppType>
+      <splType>int16</splType>
+    </attribute>
+    <attribute>
+      <name>windSpeedKnots</name>
+      <cppType>SPL::int16</cppType>
+      <splType>int16</splType>
+    </attribute>
+    <attribute>
+      <name>windGustKnots</name>
+      <cppType>SPL::int16</cppType>
+      <splType>int16</splType>
+    </attribute>
+  </attributes>
+
+</tupleModel>

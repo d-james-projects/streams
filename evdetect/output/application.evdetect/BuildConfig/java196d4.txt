@@ -1,0 +1,15 @@
+verboseMode=false
+generated=false
+className="com.ibm.streamsx.inet.http.HTTPPostOper"
+classLibrary.0="/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.inet/impl/lib/com.ibm.streamsx.inet.jar"
+classLibrary.0.complex=false
+classLibrary.1="/opt/ibm/InfoSphere_Streams/4.3.0.0/toolkits/com.ibm.streamsx.inet/opt/downloaded/*"
+classLibrary.1.complex=false
+parameter.className
+parameter.classLibrary
+parameter.headerContentType
+parameter.url
+inputPortCount=1
+inputPort.0=1
+inputPort.0.0=rstring-jsonString
+outputPortCount=0

@@ -1,0 +1,4 @@
+	@$(CXX_LN) $(SPL_CXXFLAGS) -o bin/HttpEventsDbg.so -fPIC -shared $(SOHttpEventsDbg) $(SPL_LDFLAGS)\
+	    build/operator/HttpEventsDbg.o \
+	    build/type/BeJwrMSw2NMgqzs8LLinKzEsHACrhAWr.o \
+	    build/type/BeJyrNIo3NArPzEvJL_1dNLMpOLTI0dMvMS8yBcACkegr2.o 
